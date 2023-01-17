@@ -16,8 +16,8 @@ RUN pip install -r /app/requirements.txt --no-cache-dir
 
 # CMD ["python","manage.py","runserver","0.0.0.0:8000"]
 
-CMD ["waitress-serve","--listen=*:8000","project1.wsgi:application"]
+#CMD ["waitress-serve","--listen=*:8000","project1.wsgi:application"]
 
-# CMD [ "gunicorn","project1.wsgi:application","--bind","0.0.0.0:8000"]
+CMD [ "gunicorn","project1.wsgi:application","--bind","0.0.0.0:8000"]
 
 # waitress-serve --listen=*:8000 project1.wsgi:application
